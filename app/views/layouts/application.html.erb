@@ -22,6 +22,12 @@
         <li><%= link_to "Log in", new_user_session_path %></li>
       <% end %>
     </header>
-    <%= yield %>
+    
+      <main class="mb-auto">
+        <%= yield %>
+     </main>
+     <footer>
+      <p>CopyRight Infratop.inc</p>
+    </footer>
   </body>
 </html>
