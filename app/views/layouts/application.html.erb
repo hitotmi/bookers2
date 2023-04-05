@@ -15,21 +15,20 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
           <a class="navbar-brand" href="/"><span>Bookers</span></a>
-          </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-        　<div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
+        　  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
         　　      <li>
             　     <%= link_to  user_path(current_user),class: "nav-link text-light" do %>
-                    <i class="fas fa-house"></i>Home
+                    <i class="fas fa-home"></i>Home
           　　   　　<% end %>
                </li>
                <li>
                  <%= link_to users_path,class: "nav-link text-light" do %>
-                 <i class="fas fa-users"></i></i>Users
+                 <i class="fas fa-users"></i>Users
                  <% end %>
                 </li>
                <li>
@@ -45,7 +44,7 @@
             <% else %>
                <li>
                  <%= link_to root_path,class: "nav-link text-light" do %>
-                 <i class="fas fa-home-lg"></i>Home
+                  <i class="fas fa-home"></i>Home
                  <% end %>
                </li>
                <li>
@@ -55,7 +54,7 @@
                  </li>
                <li>
                  <%= link_to new_user_registration_path,class: "nav-link text-light" do %>
-                 <i class="fas fa-user-plus"></i>Sing up
+                 <i class="fas fa-user-plus"></i>Sign up
                  <% end %>
                  </li>
                <li><%= link_to new_user_session_path,class: "nav-link text-light" do %>
@@ -68,12 +67,15 @@
        </div>
      </nav>
     </header>
-
+ 
     <main>
       <p class="notice"><%= notice %></p>
 　　　<p class="alert"><%= alert %></p>
-      <%= yield %>
+      <div class="container">
+           <%= yield %>
+      </div>
     </main>
+
     <footer>
       <div class="container mt-5">
   	    <div class="row">
